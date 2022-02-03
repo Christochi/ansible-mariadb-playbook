@@ -1,0 +1,6 @@
+- name: Call mariadb-install Tasks
+  import_tasks: mariadb-install.yml
+
+- name: Call dependencies Tasks
+  import_tasks: dependencies.yml
+
