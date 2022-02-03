@@ -6,13 +6,13 @@
 - name: Install Mariadb Server
   yum:
     name: mariadb-server
-    state: present
+    state: absent
 
-- name: Start Mariadb
-  service:
-    name: mariadb
-    enabled: yes
-    state: started
-  notify: 
-  - Populate service facts
-  - Print Mariadb service facts
+# - name: Start Mariadb
+#   service:
+#     name: mariadb
+#     enabled: yes
+#     state: started
+#   notify: 
+#   - Populate service facts
+#   - Print Mariadb service facts
