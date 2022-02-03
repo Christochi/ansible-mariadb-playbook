@@ -6,7 +6,7 @@
 - name: Install Mariadb Server
   yum:
     name: mariadb-server
-    state: present
+    state: absent
 
 - name: Start Mariadb
   service:
