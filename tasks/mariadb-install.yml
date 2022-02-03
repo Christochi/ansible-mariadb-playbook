@@ -13,4 +13,6 @@
     name: mariadb
     enabled: yes
     state: started
-  notify: Populate service facts
+  notify: 
+  - Populate service facts
+  - Print Mariadb service facts
