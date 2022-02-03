@@ -3,4 +3,4 @@
 
 - name: Print Mariadb service facts
   ansible.builtin.debug:
-    var: ansible_facts.services
+    var: ansible_facts.services['mariadb.service'].state
