@@ -11,8 +11,8 @@
 - name: Start Mariadb
   service:
     name: mariadb
-    enabled: yes
+    enabled: yes # service starts on boot
     state: started
   notify: 
   - Populate service facts
-  - Print Mariadb service facts
+  - Print Mariadb status
