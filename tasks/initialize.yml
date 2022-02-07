@@ -1,0 +1,13 @@
+# - name: Call config Tasks
+#   import_tasks: config.yml
+
+- name: Copy over DB
+  synchronize:
+    src: dump.sql.bz2
+    dest: "/tmp"
+
+- name: Create Wordpress DB
+  mysql_db:
+    name: wordpress
+    state: import
+    target: /tmp/dump.sql.bz2
