@@ -4,8 +4,8 @@
 - name: Call dependencies Tasks
   import_tasks: dependencies.yml
 
-# - name: Call initialize Tasks
-#   import_tasks: initialize.yml 
+- name: Call initialize Tasks
+  import_tasks: initialize.yml 
 #   when: initialize == true
 
 # - name: Call config Tasks
