@@ -8,9 +8,9 @@
     name: mariadb-server
     state: present
 
-- name: Install Python3-PyMySQL
+- name: Install Python2-PyMySQL
   yum:
-    name: python3-PyMySQL
+    name: python2-PyMySQL
     state: present
   # notify:
   # - Load data in MariaDB
