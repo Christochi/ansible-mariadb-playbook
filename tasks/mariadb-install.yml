@@ -12,6 +12,7 @@
   yum:
     name: python3-PyMySQL
     state: present
+    skip_broken: yes
   # notify:
   # - Load data in MariaDB
     
