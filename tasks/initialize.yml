@@ -3,11 +3,11 @@
 
 - name: Copy over DB
   synchronize:
-    src: employees_db-full-1.0.6.tar.bz2
+    src: dump.sql
     dest: /tmp
 
 - name: Create Wordpress DB
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/employees_db-full-1.0.6.tar.bz2
+    target: /tmp/dump.sql.bz2
