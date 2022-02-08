@@ -17,4 +17,3 @@
     name: wordpress
     state: import
     target: /tmp/dump.sql.bz2
-    force: yes
