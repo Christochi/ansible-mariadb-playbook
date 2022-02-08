@@ -1,15 +1,15 @@
 # - name: Call config Tasks
 #   import_tasks: config.yml
 
-# - name: Copy over DB
-#   synchronize:
-#     src: dump.sql.bz2
-#     dest: /tmp
+- name: Copy over DB
+  synchronize:
+    src: dump.sql
+    dest: /tmp
 
 - name: Compress file using BZ2
   archive:
-    path: files/dump.sql
-    dest: /tmp
+    path: /tmp/dump.sql
+    dest: /tmp/dump.sql.bz2
     format: bz2
 
 - name: Create Wordpress DB
