@@ -10,4 +10,4 @@
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/dump.sql.bz2
+    target: /tmp/dump.sql
