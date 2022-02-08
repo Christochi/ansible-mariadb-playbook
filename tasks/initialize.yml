@@ -2,9 +2,9 @@
 #   import_tasks: config.yml
 
 - name: Copy over DB
-  synchronize:
+  copy:
     src: dump.sql.bz2
-    dest: "/tmp"
+    dest: /tmp
 
 - name: Create Wordpress DB
   mysql_db:
