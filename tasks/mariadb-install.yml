@@ -8,10 +8,10 @@
     name: mariadb-server
     state: present
 
-# - name: Install Python3-PyMySQL
-#   yum:
-#     name: python3-PyMySQL
-#     state: present
+- name: Install Python3-PyMySQL
+  yum:
+    name: python3-PyMySQL
+    state: absent
   # notify:
   # - Load data in MariaDB
     
