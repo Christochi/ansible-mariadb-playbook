@@ -12,8 +12,6 @@
   yum:
     name: python2-PyMySQL
     state: present
-  # notify:
-  # - Load data in MariaDB
     
 - name: Start Mariadb
   service:
