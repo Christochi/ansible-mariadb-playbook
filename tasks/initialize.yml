@@ -8,7 +8,7 @@
 
 - name: Compress file using BZ2
   archive:
-    path: /Users/christochi/DOU/ansible-mariadb-playbook/files/dump.sql
+    path: files/dump.sql
     dest: /tmp
     format: bz2
 
