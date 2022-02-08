@@ -2,7 +2,7 @@
 #   import_tasks: config.yml
 
 - name: Copy over DB
-  copy:
+  synchronize:
     src: dump.sql.bz2
     dest: /tmp
 
