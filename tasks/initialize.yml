@@ -1,3 +1,8 @@
+- name: Delete database with name 'wordpress'
+  mysql_db:
+    name: wordpress
+    state: absent
+
 # - name: Call config Tasks
 #   import_tasks: config.yml
 
