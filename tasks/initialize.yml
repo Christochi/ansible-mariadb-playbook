@@ -3,19 +3,21 @@
 
 - name: Copy over DB
   synchronize:
-    src: {{ db_file }}
-    dest: /tmp
+    src: 
+    - {{ db_file }}
+    - {{ db_data }}
+    dest: /tmp/hr-db
 
 - name: Compress file using BZ2
   archive:
-    path: /tmp/{{ db_file }}
-    dest: /tmp/{{ db_file }}.bz2
+    path: /tmp/hr-db/*
+    dest: /tmp/hr-db/{{ database }}.bz2
     format: bz2
 
 - name: Create Wordpress DB
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/{{ db_file }}.bz2
+    target: /tmp/hr-db/{{ databasee }}.bz2
   # notify:
   # - Load data in MariaDB
