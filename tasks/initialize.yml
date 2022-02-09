@@ -7,11 +7,13 @@
     dest: /tmp
   with_items:
     - "{{ db_file }}"
-    # - "{{ db_data }}"
+    - "{{ db_data }}"
 
 - name: Compress file using BZ2
   archive:
-    path: /tmp/dump.sql
+    path: 
+    - /tmp/{{ db_file }}
+    - /tmp/{{ db_data }}
     dest: /tmp/dump.sql.bz2
     format: bz2
 
