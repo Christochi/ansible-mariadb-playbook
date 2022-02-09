@@ -19,6 +19,6 @@
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/hr-db/{{ database }}.bz2
+    target: /tmp/hr-db/dump.sql.bz2
   # notify:
   # - Load data in MariaDB
