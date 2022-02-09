@@ -4,8 +4,8 @@
 - name: Copy over DB
   synchronize:
     src: 
-      - "{{ db_file }}"
-      - "{{ db_data }}"
+    - create_tables.sql
+    - laod_data.sql
     dest: /tmp/hr-db/
 
 - name: Compress file using BZ2
