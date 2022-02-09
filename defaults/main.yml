@@ -1,8 +1,6 @@
-# initialize: false
+initialize: false
 
-db_file: dump.sql
-db_data: load_data.sql
-database: dump.sql
+db_file: dump.sql.bz2
 
 port: 3306 
 socket: /var/lib/mysql/mysql.sock
