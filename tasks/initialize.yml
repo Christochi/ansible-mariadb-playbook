@@ -3,17 +3,12 @@
 
 - name: Copy over DB
   synchronize:
-    src: "{{ item }}"
+    src: "{{ db_file }}"
     dest: /tmp
-  with_items:
-    - "{{ db_file }}"
-    # - "{{ db_data }}"
-
+  
 - name: Compress file using BZ2
   archive:
-    path: 
-    - /tmp/{{ db_file }}
-    # - /tmp/{{ db_data }}
+    path: /tmp/{{ db_file }}
     dest: /tmp/{{ db_file }}.bz2
     format: bz2
 
@@ -22,5 +17,3 @@
     name: wordpress
     state: import
     target: /tmp/{{ db_file }}.bz2
-  # notify:
-  # - Load data in MariaDB
