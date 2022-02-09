@@ -3,8 +3,8 @@
     name: wordpress
     state: absent
 
-# - name: Call config Tasks
-#   import_tasks: config.yml
+- name: Call config Tasks
+  import_tasks: config.yml
 
 - name: Copy over DB
   synchronize:
