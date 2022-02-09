@@ -1,4 +1,4 @@
-initialize: false
+initialize: true
 
 db_file: dump.sql.bz2
 
