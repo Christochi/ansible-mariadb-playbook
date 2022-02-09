@@ -9,13 +9,13 @@
 - name: Compress file using BZ2
   archive:
     path: /tmp/hr-db/*
-    dest: /tmp/hr-db/"{{ database }}".bz2
+    dest: /tmp/hr-db/{{ database }}.bz2
     format: bz2
 
 - name: Create Wordpress DB
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/hr-db/"{{ database }}".bz2
+    target: /tmp/hr-db/{{ database }}.bz2
   # notify:
   # - Load data in MariaDB
