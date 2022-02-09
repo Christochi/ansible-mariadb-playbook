@@ -4,14 +4,14 @@
 - name: Copy over DB
   synchronize:
     src: "{{ item }}"
-    dest: /tmp/hr-db/
+    dest: /tmp
   with_items:
     - "{{ db_file }}"
     # - "{{ db_data }}"
 
 - name: Compress file using BZ2
   archive:
-    path: /tmp/hr-db/*
+    path: /tmp/dump.sql
     dest: /tmp/dump.sql.bz2
     format: bz2
 
