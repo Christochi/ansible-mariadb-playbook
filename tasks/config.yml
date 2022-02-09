@@ -1,0 +1,4 @@
+- name: Template a file to /etc/file.conf
+  template:
+    src: my.cnf.j2
+    dest: /etc/mysql/my.cnf
