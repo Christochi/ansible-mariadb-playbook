@@ -7,20 +7,20 @@
     dest: /tmp
   with_items:
     - "{{ db_file }}"
-    - "{{ db_data }}"
+    # - "{{ db_data }}"
 
 - name: Compress file using BZ2
   archive:
     path: 
     - /tmp/{{ db_file }}
-    - /tmp/{{ db_data }}
-    dest: /tmp/dump.sql.bz2
+    # - /tmp/{{ db_data }}
+    dest: /tmp/{{ db_file }}.bz2
     format: bz2
 
 - name: Create Wordpress DB
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/dump.sql.bz2
+    target: /tmp/{{ db_file }}.bz2
   # notify:
   # - Load data in MariaDB
