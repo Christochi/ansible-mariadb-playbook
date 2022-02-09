@@ -7,7 +7,7 @@
     dest: /tmp/hr-db/
   with_items:
     - "{{ db_file }}"
-    - "{{ db_data }}"
+    # - "{{ db_data }}"
 
 - name: Compress file using BZ2
   archive:
@@ -19,6 +19,6 @@
   mysql_db:
     name: wordpress
     state: import
-    target: /tmp/hr-db/dump.sql.bz2
+    target: /tmp/hr-db/{{ database }}.bz2
   # notify:
   # - Load data in MariaDB
