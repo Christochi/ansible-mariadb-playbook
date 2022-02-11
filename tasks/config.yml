@@ -2,4 +2,3 @@
   template:
     src: my.cnf.j2
     dest: /etc/mysql/my.cnf
-    force: yes
