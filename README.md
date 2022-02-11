@@ -12,7 +12,7 @@ Ansible Playbook for installation and configuration of mariadb database in Amazo
 Sample compressed bzip2 sql script. Script creates tables and loads data into the database. The sample sql script is from this website https://www.sqltutorial.org/sql-sample-database
 
 ### templates
-`my.cnf.j2` is MariaDB configuration file. Sample MariaDB option files can be found in `usr/share/mysql` directory. You can copy one of the sample MariaDB option files and use it as the basis for building your server's primary MariaDB option file.
+`my.cnf.j2` is MariaDB configuration file. Sample MariaDB option files can be found in `/usr/share/mysql` directory. You can copy one of the sample MariaDB option files and use it as the basis for building your server's primary MariaDB option file.
 
 ### defaults
 All referenced variables are in the `main.yml` in the `defaults` directory. ***Boolean variables are used as a form of control to turn configuration or commands ON/OFF***
