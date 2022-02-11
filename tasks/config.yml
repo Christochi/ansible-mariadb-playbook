@@ -1,5 +1,5 @@
 - name: Template a file to /etc/mysql/my.cnf
   template:
     src: my.cnf.j2
-    dest: /etc/mysql/my.cnf    
+    dest: /etc/mysql/my.cnf
     force: yes
