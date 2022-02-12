@@ -25,4 +25,7 @@ The files are the tasks ansible will perform:
 - **mariadb-install.yml:** installs MariaDB
 - **main.yml:** calls the other tasks to perform when ansible plays the playbook
 
+### handlers
+service_facts is called to know the status (state: reloaded, restarted, started, stopped) of the MariaDB database
+
 ***More functionalities will be added to the playbook. Feel free to make any pull requests, report issues or offer some advice and feedback***
