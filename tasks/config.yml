@@ -4,6 +4,7 @@
     dest: "{{cnf_dest}}/my-custom.cnf"
   register: template_cnf
 
-- name: check status of template
+- name: confirm dest of config file
   debug:
-    msg: "{{template_cnf}}.dest"
+    msg: successfully uploaded
+  when: "{{template_cnf}}.dest == {{cnf_dest}}/my-custom.cnf"
