@@ -2,6 +2,6 @@
   import_tasks: rhel.yml
   when: ansible_os_family == "RedHat"
 
-- name: Debian Based install steps
-  import_tasks: deb.yml
-  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
+# - name: Debian Based install steps
+#   import_tasks: deb.yml
+#   when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
