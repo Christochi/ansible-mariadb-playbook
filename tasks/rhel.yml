@@ -1,0 +1,9 @@
+- name: Call mariadb-install Tasks
+  import_tasks: mariadb-install.yml
+
+- name: Call dependencies Tasks
+  import_tasks: dependencies.yml
+
+- name: Call initialize Tasks
+  import_tasks: initialize.yml 
+  when: initialize == true
