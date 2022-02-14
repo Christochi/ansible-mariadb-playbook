@@ -1,4 +1,4 @@
 - name: Template a file to /etc/my.cnf.d
   template:
-    src: my-custom.cnf.j2
-    dest: /etc/my.cnf.d/my-custom.cnf
+    src: "{{config_file}}"
+    dest: "{{cnf_dest}}/my-custom.cnf"
