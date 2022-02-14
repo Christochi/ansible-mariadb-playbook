@@ -6,4 +6,4 @@
 
 - name: check status of template
   debug:
-    msg: "{{template_cnf}}"
+    msg: "{{template_cnf}}.dest"
