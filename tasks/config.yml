@@ -2,3 +2,8 @@
   template:
     src: "{{config_file}}"
     dest: "{{cnf_dest}}/my-custom.cnf"
+  register: template_cnf
+
+- name: check status of template
+  debug:
+    msg: "{{template_cnf}}"
