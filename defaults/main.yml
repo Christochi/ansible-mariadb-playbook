@@ -15,3 +15,6 @@ net_buffer_length: 2K
 thread_stack: 240K
 
 server-id: 1
+
+config_file: my-custom.cnf.j2
+cnf_dest: /etc/my.cnf.d
