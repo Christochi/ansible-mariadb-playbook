@@ -7,4 +7,4 @@
 - name: confirm dest of config file
   debug:
     msg: successfully uploaded
-  when: template_cnf.dest == "cnf_dest/my-custom.cnf"
+  when: template_cnf is succeeded
