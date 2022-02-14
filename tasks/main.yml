@@ -1,9 +1,7 @@
-- name: Call mariadb-install Tasks
-  import_tasks: mariadb-install.yml
+- name: RHEL install steps
+  import_tasks: rhel.yml
+  when: ansible_os_family == "RedHat"
 
-- name: Call dependencies Tasks
-  import_tasks: dependencies.yml
-
-- name: Call initialize Tasks
-  import_tasks: initialize.yml 
-  when: initialize == true
+- name: Debian Based install steps
+  import_tasks: deb.yml
+  when: ansible_os_family == "Debian" or ansible_os_family == "Ubuntu"
